@@ -26,13 +26,13 @@ async def download_report(session, report):
     report_sha1 = report['SHA-1']
 
     # Ensure directory exists
-    os.makedirs(report_year, exist_ok=True)
+    os.makedirs('reports/'+report_year, exist_ok=True)
 
     # Set hash check
     hash_check = hashlib.sha1()
 
     # Set download path
-    download_path = os.path.join(report_year, report_filename)
+    download_path = os.path.join('reports',report_year, report_filename)
 
     if report_already_downloaded(download_path):
         print("[!] File {} already exists".format(report_filename))
