@@ -86,5 +86,5 @@ if __name__ == '__main__':
     sem = asyncio.Semaphore(10)
 
     # Create async loop
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
     loop.run_until_complete(download_all_reports(loop, APT_reports))
