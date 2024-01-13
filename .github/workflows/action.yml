@@ -3,7 +3,7 @@ name: default
 on:
   push:
     branches:
-    - '*'
+      - '*'
 
 jobs:
   push-container-image:
@@ -30,7 +30,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: ghcr.io/schwankner/APTnotes-tools:latest
+          file: {context}/APTnotes_async_dockerfile.Dockerfile
+          tags: ghcr.io/schwankner/aptnotes-tools:latest
           push: true
           platforms: linux/amd64,linux/arm64
 
