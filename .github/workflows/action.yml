@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: { context }/APTnotes_async_dockerfile.Dockerfile
+          file: APTnotes_async_dockerfile.Dockerfile
           # Note: tags has to be all lower-case
           tags: |
             ghcr.io/schwankner/APTnotes-tools:latest
