@@ -23,7 +23,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: {context}/APTnotes_async_dockerfile.Dockerfile
           tags: ghcr.io/schwankner/APTnotes-tools:latest
           push: true
           platforms: linux/amd64,linux/arm64
