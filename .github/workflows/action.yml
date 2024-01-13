@@ -1,3 +1,10 @@
+name: default
+
+on:
+  push:
+    branches:
+    - '*'
+
 jobs:
   push-container-image:
     runs-on: ubuntu-latest
